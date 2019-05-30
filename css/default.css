@@ -1,0 +1,162 @@
+/* Default DevCorner Style Setting */
+
+/* Fonts */
+@font-face {
+    font-family: 'Lobster'; /*a name to be used later*/
+    src: url('../font/Lobster_1.4.otf'); /*URL to font*/
+}
+
+@font-face {
+  font-family: "Roboto";
+  src:url("../fonts/Roboto/roboto.eot");
+  src:url("../fonts/Roboto/roboto.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Roboto/roboto.svg#line-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root{
+  --dc-: #28a745; /* #28a745 */
+  --rgba-dc-: rgba(40, 167, 69, 0.5);
+  --rgba-wh-: rgba(255, 255, 255, 0.5);
+  --gr-: #515151;
+  --wh-: #fefefe;
+  --sg-: #f7f7f7;
+  --dw-: #ebe9ea;
+  --lg-: #b9b9b9;
+  --shadow1-: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  --shadow2-: 0 0 8px rgba(0,0,0,0.6);
+  --shadow3-: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.08) inset;
+  --text-sh-: 2px 5px 2px rgba(33,33,33,0.25);
+  --card-: perspective(1000px) rotateY(-20deg) translateX(-20px);
+}
+
+/* This will help a bit with the layered box with different padding,margin or even border */
+*, *::before, *::after{box-sizing: border-box;}
+
+/* Default Setup */
+.fa-code{
+  color: var(--dc-);
+}
+._message h1{
+  font-size: 2.5em;
+  font-weight: 300;
+  color: var(--gr-);
+  text-align: center;
+  margin: 0.8em auto 0;
+  text-shadow: var(--text-sh-);
+}
+._message p{
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--gr-);
+  text-align: center;
+  text-shadow: var(--text-sh-);
+}
+._message a{
+  color: var(--dc-);
+  text-decoration: none;
+}
+._message{
+  background: url(../img/desk.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  color: #fff;
+  position: absolute;
+  top: -150px;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  padding: 5px 0px;
+  transition: top 300ms cubic-bezier(0.17,0.04,0.03,0.94);
+  overflow: hidden;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--dc-);
+  box-shadow: var(--shadow3-);
+  z-index: 101;
+}
+#_toggle{
+  position: absolute;
+  appearance: none;
+  cursor: pointer;
+  left: -100%;
+  top: -100%;
+}
+#_toggle + label{
+  position: absolute;
+  cursor: pointer;
+  padding: 10px;
+  background: var(--dc-);
+  border: 1px solid var(--dc-);
+  border-radius: 25%;
+  width: 50px;
+  color: var(--wh-);
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 500ms ease;
+  margin: 10px 10px;
+  box-shadow: var(--shadow3-);
+  z-index: 102;
+}
+#_toggle + label:after{
+  content: "\f121";
+  font-family: 'FontAwesome';
+  font-size: 2em;
+  font-weight: 600;
+  vertical-align: sub;
+}
+._container{
+  transition: margin 300ms cubic-bezier(0.17,0.04,.03,0.94);
+  padding: 5em 3em;
+  position: absolute;
+}
+#_toggle:checked ~ ._message{
+  top: 0;
+}
+#_toggle:checked ~ ._container{
+  margin-top: 150px;
+}
+#_toggle:checked + label{
+  color: var(--wh-);
+}
+#_toggle:checked + label:after{
+  content: "\f00d";
+  font-family: 'FontAwesome';
+  font-size: 2em;
+  font-weight: 600;
+  vertical-align: sub;
+}
+/* Default Setup - END */
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* End */
+
